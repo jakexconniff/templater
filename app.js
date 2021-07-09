@@ -19,8 +19,6 @@ const decodeTemplate = ({ exampleString, exampleDBContents }) => {
   // Then we map over the pieces.
   const fixedString = brokenString.map((stringy, outerIndex) => {
     // Then for each piece, we need to loop over both the split strings and the potential targets.
-
-    console.log(exampleDBContents)
     // This is what loops over the exampleDBContents and compares it to the pieces of the original string (broken down) and finds the match.
     const stringyFinder = exampleDBContents.map((dbContents, innerIndex) => {
       if (dbContents.templateString == stringy) {
